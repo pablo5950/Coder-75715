@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Íconos de redes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Enlace al CSS -->
+  <link rel="stylesheet" href="../css/estilos.css" />
+
+  <title>JBIKES - Contacto</title>
+</head>
+
+<body id="body">
+  
+  <!-- Header -->
+  <header id="header">
+    <h1>Contacto</h1>
+  </header>
+
+  <!-- Navegación -->
+  <nav class="navBar">
+    <ul>
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="acercaDe.html">Acerca de</a></li>
+      <li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="nuestrosClientes.html">Nuestros Clientes</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main -->
+  <main id="main">
+    <form class="formulario-contacto" action="/submit" method="post">
+      <label for="nombre">Nombre</label>
+      <input type="text" name="nombre" id="nombre" required />
+
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" required />
+
+      <label for="telefono">Teléfono</label>
+      <input type="text" name="telefono" id="telefono" />
+
+      <label for="mensaje">Mensaje</label>
+      <textarea name="mensaje" id="mensaje" rows="5" required></textarea>
+
+      <input type="submit" value="Enviar" />
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <nav class="footerNav">
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="acercaDe.html">Acerca de</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="nuestrosClientes.html">Nuestros Clientes</a></li>
+      </ul>
+    </nav>
+
+    <section class="footerCopy">
+      <h2>Copyright 2025</h2>
+      <span>Creado por - Pablo Gambero</span>
+    </section>
+
+    <section class="footerRedes">
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-facebook"></i>
+      <i class="fa-brands fa-whatsapp"></i>
+    </section>
+  </footer>
+
+</body>
+</html>
