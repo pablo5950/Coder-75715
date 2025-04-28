@@ -1,0 +1,40 @@
+#header{
+  
+    color: yellow;
+    text-align:center;
+   
+   }
+   .formulario-contacto {
+     display: flex;
+     flex-direction: column;
+     gap: 15px;
+     background-color: #fff;
+     padding: 20px;
+     border-radius: 10px;
+     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+     width: 100%;
+     max-width: 400px;
+   }
+   
+   input[type="text"],
+   input[type="email"],
+   textarea {
+     padding: 10px;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+     resize: vertical;
+   }
+   
+   input[type="submit"] {
+     background-color: #007bff;
+     color: white;
+     padding: 10px;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+     font-weight: bold;
+   }
+   
+   input[type="submit"]:hover {
+     background-color: #0056b3;
+   }

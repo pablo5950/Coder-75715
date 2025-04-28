@@ -1,0 +1,85 @@
+main {  
+    flex: 1;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* NOVEDADES (INICIO) */
+  .novedades h2 {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 2rem;
+    color: #222;
+  }
+  
+  .foto-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #fff;
+    max-width: 1400px; /* ANCHO MAX */
+    margin: 0 auto; 
+  }
+  
+  .foto {
+    width: calc(25% - 1rem); /* 4 COLUMNAS CON GAP */
+    max-width: 300px;
+    min-width: 250px; 
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .foto:hover {
+    transform: scale(1.05);
+  }
+  
+  
+  footer {
+    background-color: #222;
+    color: white;
+    padding: 30px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  
+  .footerNav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footerNav a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .footerLogo img {
+    max-width: 150px;
+    height: auto;
+  }
+  
+  .footerRedes {
+    display: flex;
+    gap: 15px;
+    font-size: 1.5rem;
+  }
+  
+  .footerRedes i {
+    color: white;
+    transition: color 0.3s;
+  }
+  
+  .footerRedes i:hover {
+    color: #ccc;
+  }
