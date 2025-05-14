@@ -42,12 +42,14 @@
   
   /* IMAGEN */
   .acercaImagen img {
+   max-width: 600px; 
     width: 100%;
-    max-height: 400px;
-    object-fit:cover;
+    height: auto;
+    object-fit: cover;
     border: 1px solid #ccc;
     border-radius: 8px;
-    margin-top: 5px;
+    margin: 0 auto;
+    display: block;
   }
   
   /* TESTIMONIOS */
@@ -69,11 +71,7 @@
   
   /* RESPONSIVO */
   @media (max-width: 768px) {
-    .acercaMain {
-      padding: 20px;
+    .acercaImagen img {
+        max-width: 90%; /* Se adapta mejor en pantallas pequeñas */
     }
-    
-    .acercaMain section {
-      padding: 20px;
-    }
-  }
+}
