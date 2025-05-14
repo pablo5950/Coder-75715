@@ -173,6 +173,24 @@ main {
   max-width: 1400px; /* ANCHO MAX */
   margin: 0 auto;
 }
+.motoCard {
+    position: relative;
+    display: inline-block;
+}
+
+.ingresoNuevo {
+    position: absolute;
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    top: 10px;
+    left: 10px;
+    transform: rotate(-8deg); 
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    border-radius: 5px;
+}
 
 .foto {
   width: calc(25% - 1rem); /* 4 COLUMNAS CON GAP */
@@ -275,14 +293,20 @@ footer {
 }
 
 /* IMAGEN */
-.acercaImagen img {
-  width: 100%;
-  max-height: 400px;
-  object-fit: cover;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  margin-top: 5px;
+.acercaImagen {
+    display: flex;
+    justify-content: center; /* Centra las imágenes */
+    gap: 20px; /* Espacio entre ellas */
+    flex-wrap: wrap; /* Permite adaptación en móviles */
 }
+
+.acercaImagen img {
+    max-width: 48%; /* Cada imagen ocupa la mitad del espacio */
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
 
 /* TESTIMONIOS */
 .testimonios {
@@ -303,11 +327,8 @@ footer {
 
 /* RESPONSIVO */
 @media (max-width: 768px) {
-  .acercaMain {
-    padding: 20px;
-  }
-  .acercaMain section {
-    padding: 20px;
+  .acercaImagen img {
+    max-width: 90%; /* Se adapta mejor en pantallas pequeñas */
   }
 }
 .catalogoMain {
