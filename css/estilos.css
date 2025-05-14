@@ -173,6 +173,7 @@ main {
   max-width: 1400px; /* ANCHO MAX */
   margin: 0 auto;
 }
+
 .motoCard {
     position: relative;
     display: inline-block;
@@ -295,18 +296,17 @@ footer {
 /* IMAGEN */
 .acercaImagen {
     display: flex;
-    justify-content: center; /* Centra las imágenes */
-    gap: 20px; /* Espacio entre ellas */
-    flex-wrap: wrap; /* Permite adaptación en móviles */
+    justify-content: center; 
+    gap: 20px; 
+    flex-wrap: wrap; 
 }
 
 .acercaImagen img {
-    max-width: 48%; /* Cada imagen ocupa la mitad del espacio */
+  max-width: 48%; 
     height: auto;
     object-fit: cover;
     border-radius: 8px;
 }
-
 
 /* TESTIMONIOS */
 .testimonios {
@@ -328,7 +328,7 @@ footer {
 /* RESPONSIVO */
 @media (max-width: 768px) {
   .acercaImagen img {
-    max-width: 90%; /* Se adapta mejor en pantallas pequeñas */
+    max-width: 90%;
   }
 }
 .catalogoMain {
@@ -459,17 +459,21 @@ textarea {
 }
 
 input[type=submit] {
-  background-color: #007bff;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
+    background-color: yellow; 
+    color: black;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); 
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
 input[type=submit]:hover {
-  background-color: #0056b3;
+    background-color: #ffcc00; 
+    transform: scale(1.05); 
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .clientesMain {
