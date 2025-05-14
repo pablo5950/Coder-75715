@@ -41,17 +41,14 @@
   }
   
   /* IMAGEN */
-  .acercaImagen img {
-   max-width: 600px; 
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    margin: 0 auto;
-    display: block;
+ .acercaImagen img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 5px;
   }
-  
   /* TESTIMONIOS */
   .testimonios {
     background-color: #f9f9f9;
