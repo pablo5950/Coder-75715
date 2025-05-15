@@ -174,29 +174,29 @@ main {
 }
 
 .motoCard {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
 .ingresoNuevo {
-    position: absolute;
-    background-color: yellow;
-    color: black;
-    font-weight: bold;
-    padding: 5px 10px;
-    font-size: 0.9rem;
-    top: 10px;
-    left: 10px;
-    transform: rotate(-8deg); 
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-    border-radius: 5px;
+  position: absolute;
+  background-color: yellow;
+  color: black;
+  font-weight: bold;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  top: 10px;
+  left: 10px;
+  transform: rotate(-8deg);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
 }
 
 .foto {
-  width: 100%; 
+  width: 100%; /* Se adapta completamente a la grilla */
   max-width: 300px;
   aspect-ratio: 4/3;
-  object-fit: contain; 
+  object-fit: contain; /* Respeta el tamaño original sin cortar */
   border-radius: 10px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;

@@ -23,6 +23,25 @@ main {
     max-width: 1400px;
     margin: 0 auto;
   }
+
+  .motoCard {
+    position: relative;
+    display: inline-block;
+}
+
+.ingresoNuevo {
+    position: absolute;
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    top: 10px;
+    left: 10px;
+    transform: rotate(-8deg); 
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    border-radius: 5px;
+}
   
   .foto {
   width: 100%; /* Se adapta completamente a la grilla */
