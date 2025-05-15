@@ -15,22 +15,20 @@ main {
   }
   
   .foto-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajuste automático */
     gap: 1rem;
     padding: 1rem;
     background-color: #fff;
-    max-width: 1400px; /* ANCHO MAX */
-    margin: 0 auto; 
+    max-width: 1400px;
+    margin: 0 auto;
   }
   
   .foto {
-    width: calc(25% - 1rem); /* 4 COLUMNAS CON GAP */
+  width: 100%; /* Se adapta completamente a la grilla */
     max-width: 300px;
-    min-width: 250px; 
     aspect-ratio: 4 / 3;
-    object-fit: cover;
+    object-fit: contain; /* Respeta el tamaño original sin cortar */
     border-radius: 10px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
