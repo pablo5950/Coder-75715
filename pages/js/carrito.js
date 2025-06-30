@@ -7,7 +7,7 @@ const carrito = [];
 //contenedores para mostrar el carrito y el total
 const contenedor = document.getElementById('carrito');
 const total = document.getElementById('total'); 
-
+const btnVaciar = document.getElementById('btnVaciar');
 
 
 // Recorremos cada botón y le asignamos un evento click
@@ -34,12 +34,20 @@ function actualizarCarrito() {
   contenedor.innerHTML = '<h3>🛒Detalle de venta:</h3>';
   let suma = 0;
 
-  // Recorremos cada ítem del carrito y lo mostramos
-  carrito.forEach(item => {
-    contenedor.innerHTML += `<p>${item.nombre} - $${item.precio.toLocaleString()}</p>`;
-    suma += item.precio;
-  });
+  if (carrito.length === 0) {
+    contenedor.innerHTML += `<p>El carrito está vacío</p>`;
+  } else {
+    carrito.forEach(item => {
+      contenedor.innerHTML += `<p>${item.nombre} - $${item.precio.toLocaleString()}</p>`;
+      suma += item.precio;
+    });
+  }
 
-  //Mostramos el total
   total.textContent = ` El monto total de su compra es de: $${suma.toLocaleString()}`;
 }
+
+//vaciar el carrito 
+btnVaciar.addEventListener('click', () => {
+  carrito.length = 0;
+  actualizarCarrito();
+});
