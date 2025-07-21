@@ -570,6 +570,82 @@ h2:hover::after {
   text-transform: capitalize;
 }
 
+.modal-carrito {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.carritoModal {
+  background: #fff;
+  padding: 25px;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  position: relative;
+  animation: entrada 0.3s ease;
+}
+
+.btnCerrar {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#abrirCarrito {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #27ae60;
+  color: #fff;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 900;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.oculto {
+  display: none;
+}
+
+@keyframes entrada {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.carritoModal button {
+  background-color: rgb(245, 245, 11); 
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  margin: 8px 5px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.carritoModal button:hover {
+  background-color: rgb(245, 245, 11);
+}
+
+
 /* RESET GENERAL */
 /* HEADER Y NAV */
 /* MAIN GENERAL */

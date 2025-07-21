@@ -34,16 +34,7 @@
     </ul>
   </nav>
   
-
   <main class="catalogoMain">
-    <section id="resumenCompra">
-       <h3> Carrito</h3>
-       <div id="carrito"></div>
-       <div id="total"> Total: $0</div>
-       <button id="btnVaciar"> Vaciar carrito</button>
-
-    </section>
-
     <section>
       <div class="gridCatalogo">
         <div class="motoCard">
@@ -159,9 +150,24 @@
         </div>
       </div>
     </section>
-  </main>
 
- <!-- FOOTER -->
+    <!-- Botón flotante para abrir el carrito -->
+    <button id="abrirCarrito">🛒 Ver carrito</button>
+
+    <!-- Modal flotante para el carrito -->
+<div id="modalCarrito" class="modal-carrito oculto">
+    <div class="carritoModal">
+     <span id="cerrarCarrito" class="btnCerrar">✖</span>
+     <div id="carrito"></div>
+     <div id="total"></div>
+     <button id="btnVaciar">Vaciar carrito</button>
+     <button id="btnFinalizar">Finalizar compra</button>
+    </div>
+</div>
+
+</main>
+
+ <!-- Footer-->
  <footer id="footer">
   <nav class="footerNav">
     <ul>
@@ -190,5 +196,9 @@
 </footer>
 
 <script src="./js/carrito.js"></script> <!-- Enlazado con hoja .js-->
+<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script> <!-- Enlazado toastify-->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- Enlazado sweet alert-->
+
+
 </body>
 </html>
