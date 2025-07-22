@@ -11,6 +11,7 @@ window.addEventListener('DOMContentLoaded', () => {
     carrito.push(...carritoGuardado);
     actualizarCarrito();
   }
+  cargarAccesorios();
 });
 
 //contenedores para mostrar el carrito y el total
@@ -178,3 +179,22 @@ modalCarrito.classList.remove('oculto');
 cerrarCarritoBtn.addEventListener('click', () => {
 modalCarrito.classList.add('oculto');
 });
+
+function cargarAccesorios() {
+  fetch('js/accesorios.json')
+    .then(res => res.json())
+    .then(data => {
+      const sugerencias = document.getElementById('sugerencias');
+      data.forEach(item => {
+        const card = document.createElement('div');
+        card.classList.add('sugerenciaCard');
+        card.innerHTML = `
+          <img src="${item.imagen}" alt="${item.nombre}">
+          <h4>${item.nombre}</h4>
+          <p>$${item.precio}</p>
+        `;
+        sugerencias.appendChild(card);
+      });
+    })
+    .catch(err => console.error('Error cargando accesorios:', err));
+}

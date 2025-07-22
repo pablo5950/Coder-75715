@@ -1,0 +1,28 @@
+[
+ 
+  {
+    "nombre": "Botas Alpine stars",
+    "precio": 8500,
+    "imagen": "/images/accesorio2.jpg"
+  },
+
+  {
+    "nombre": "Casco Integral LS2",
+    "precio": 32000,
+    "imagen": "/images/accesorio1.jpg"
+
+  },
+  
+  {
+    "nombre": "Aceite Castrol actevo",
+    "precio": 12000,
+    "imagen": "/images/accesorio3.jpg"
+  },
+
+  {
+    "nombre": "Luces LED universales para faro delantero",
+    "precio": 4500,
+    "imagen": "/images/accesorio4.jpg"
+  }
+
+]
