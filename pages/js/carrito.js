@@ -1,4 +1,4 @@
-//Seleccionamos todos los botones "Comprar"
+// Seleccionamos todos los botones "Comprar"
 const botones = document.querySelectorAll('.btnComprar');
 
 // Array que va a tener los productos agregados al carrito
@@ -11,16 +11,16 @@ window.addEventListener('DOMContentLoaded', () => {
     carrito.push(...carritoGuardado);
     actualizarCarrito();
   }
-  cargarAccesorios();
+  cargarAccesorios(); // 👈 Muestra los accesorios simulando una API
 });
 
-//contenedores para mostrar el carrito y el total
+// Contenedores para mostrar el carrito y el total
 const contenedor = document.getElementById('carrito');
 const total = document.getElementById('total'); 
 const btnVaciar = document.getElementById('btnVaciar');
 const btnFinalizar = document.getElementById('btnFinalizar');
 
-//recorremos cada botón y le asignamos un evento click
+// Recorrer cada botón "Comprar" y agregar evento
 botones.forEach(boton => {
   boton.addEventListener('click', (e) => {
     const card = e.target.closest('.motoCard');
@@ -39,22 +39,21 @@ botones.forEach(boton => {
     Toastify({
       text: `${nombre} agregado al carrito ✅`,
       duration: 3000,
-      newWindow: true,
-      gravity: "bottom", 
-      position: "center", 
+      gravity: "bottom",
+      position: "center",
       style: {
-      background: "#27ae60",
-      color: "#fff",
-      padding: "15px",
-      fontSize: "18px",
-      borderRadius: "8px",
-      fontWeight: "bold",
-      textAlign: "center",
-      position: "fixed", 
-      bottom: "50%",    
-      left: "50%",       
-      transform: "translate(-50%, 50%)",
-      zIndex: "9999"    
+        background: "#27ae60",
+        color: "#fff",
+        padding: "15px",
+        fontSize: "18px",
+        borderRadius: "8px",
+        fontWeight: "bold",
+        textAlign: "center",
+        position: "fixed",
+        bottom: "50%",
+        left: "50%",
+        transform: "translate(-50%, 50%)",
+        zIndex: "9999"
       }
     }).showToast();
 
@@ -62,42 +61,38 @@ botones.forEach(boton => {
   });
 });
 
-// muestra en pantalla los productos del carrito y el total
+// Mostrar productos del carrito y el total
 function actualizarCarrito() {
   contenedor.innerHTML = '<h3>🛒Detalle de venta:</h3>';
   let suma = 0;
 
   if (carrito.length === 0) {
     contenedor.innerHTML += `<p>El carrito está vacío</p>`;
-  } else {
-    carrito.forEach((item, index) => {
-      contenedor.innerHTML += `
-        <p>
-          ${item.nombre} x${item.cantidad} - $${(item.precio * item.cantidad).toLocaleString()}
-          <button class="btnEliminar" data-index="${index}">❌</button>
-        </p>
-      `;
-      suma += item.precio * item.cantidad;
-    });
+    total.textContent = '';
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+    return;
   }
 
-  total.textContent = ` El monto total de su compra es de: $${suma.toLocaleString()}`;
-  guardarCarrito();
+  carrito.forEach((item, index) => {
+    contenedor.innerHTML += `
+      <p>
+        ${item.nombre} x${item.cantidad} - $${(item.precio * item.cantidad).toLocaleString()}
+        <button class="btnEliminar" data-index="${index}">❌</button>
+      </p>
+    `;
+    suma += item.precio * item.cantidad;
+  });
 
-  // Asignar eventos a botones de eliminación individual
-  const botonesEliminar = document.querySelectorAll('.btnEliminar');
-  botonesEliminar.forEach(btn => {
+  total.textContent = ` El monto total de su compra es de: $${suma.toLocaleString()}`;
+  localStorage.setItem('carrito', JSON.stringify(carrito));
+
+  document.querySelectorAll('.btnEliminar').forEach(btn => {
     btn.addEventListener('click', (e) => {
       const index = e.target.dataset.index;
       carrito.splice(index, 1);
       actualizarCarrito();
     });
   });
-}
-
-//guardar carrito en localStorage
-function guardarCarrito() {
-  localStorage.setItem('carrito', JSON.stringify(carrito));
 }
 
 // Vaciar el carrito
@@ -107,7 +102,7 @@ btnVaciar.addEventListener('click', () => {
   localStorage.removeItem('carrito');
 });
 
-// Finalización de compra con validación
+// Finalizar compra con validación
 btnFinalizar.addEventListener('click', () => {
   if (carrito.length === 0) {
     Swal.fire({
@@ -164,22 +159,25 @@ btnFinalizar.addEventListener('click', () => {
       carrito.length = 0;
       actualizarCarrito();
       localStorage.removeItem('carrito');
+      modalCarrito.classList.add('oculto'); // 👈 Cierra el modal después de confirmar
     }
   });
 });
 
+// Abrir y cerrar modal del carrito
 const abrirCarritoBtn = document.getElementById('abrirCarrito');
 const modalCarrito = document.getElementById('modalCarrito');
 const cerrarCarritoBtn = document.getElementById('cerrarCarrito');
 
 abrirCarritoBtn.addEventListener('click', () => {
-modalCarrito.classList.remove('oculto');
+  modalCarrito.classList.remove('oculto');
 });
 
 cerrarCarritoBtn.addEventListener('click', () => {
-modalCarrito.classList.add('oculto');
+  modalCarrito.classList.add('oculto');
 });
 
+// Simular llamada a API de accesorios
 function cargarAccesorios() {
   fetch('js/accesorios.json')
     .then(res => res.json())
