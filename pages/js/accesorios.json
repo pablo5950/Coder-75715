@@ -2,7 +2,7 @@
  
   {
     "nombre": "Botas Alpine stars",
-    "precio": 8500,
+    "precio": 55000,
     "imagen": "/images/accesorio2.jpg"
   },
 
@@ -20,8 +20,8 @@
   },
 
   {
-    "nombre": "Luces LED universales para faro delantero",
-    "precio": 4500,
+    "nombre": "Escape R1 Yamaha",
+    "precio": 70000,
     "imagen": "/images/accesorio4.jpg"
   }
 

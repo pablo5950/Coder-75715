@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const carritoGuardado = JSON.parse(localStorage.getItem('carrito'));
   if (carritoGuardado) {
     carrito.push(...carritoGuardado);
-    actualizarCarrito();
+    mostrarCarrito();
   }
   cargarAccesorios(); //simulacipon de una api
 });
@@ -36,33 +36,35 @@ botones.forEach(boton => {
       carrito.push({ nombre, precio, cantidad: 1 });
     }
 
+    //toastify
+
     Toastify({
       text: `${nombre} agregado al carrito ✅`,
       duration: 3000,
       gravity: "bottom",
       position: "center",
       style: {
-      background: "#27ae60",
-      color: "#fff",
-      padding: "15px",
-      fontSize: "18px",
-      borderRadius: "8px",
-      fontWeight: "bold",
-      textAlign: "center",
-      position: "fixed",
-      bottom: "50%",
-      left: "50%",
-      transform: "translate(-50%, 50%)",
-      zIndex: "9999"
+      background:"#27ae60",
+      color:"#fff",
+      padding:"15px",
+      fontSize:"18px",
+      borderRadius:"8px",
+      fontWeight:"bold",
+      textAlign:"center",
+      position:"fixed",
+      bottom:"50%",
+      left:"50%",
+      transform:"translate(-50%, 50%)",
+      zIndex:"9999"
       }
     }).showToast();
 
-    actualizarCarrito();
+     mostrarCarrito();
   });
 });
 
 //Mostrar productos del carrito y el total
-function actualizarCarrito() {
+function  mostrarCarrito() {
   contenedor.innerHTML = '<h3>🛒Detalle de venta:</h3>';
   let suma = 0;
 
@@ -90,7 +92,7 @@ function actualizarCarrito() {
     btn.addEventListener('click', (e) => {
       const index = e.target.dataset.index;
       carrito.splice(index, 1);
-      actualizarCarrito();
+       mostrarCarrito();
     });
   });
 }
@@ -98,7 +100,7 @@ function actualizarCarrito() {
 // Vaciar el carrito
 btnVaciar.addEventListener('click', () => {
   carrito.length = 0;
-  actualizarCarrito();
+   mostrarCarrito();
   localStorage.removeItem('carrito');
 });
 
@@ -157,7 +159,7 @@ btnFinalizar.addEventListener('click', () => {
       });
 
       carrito.length = 0;
-      actualizarCarrito();
+      mostrarCarrito();
       localStorage.removeItem('carrito');
       modalCarrito.classList.add('oculto'); 
     }
