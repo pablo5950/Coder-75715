@@ -1,17 +1,17 @@
-// Seleccionamos todos los botones "Comprar"
+//seleccionamos todos los botones "Comprar"
 const botones = document.querySelectorAll('.btnComprar');
 
-// Array que va a tener los productos agregados al carrito
+//array que va a tener los productos agregados al carrito
 const carrito = [];
 
-// Recupero el carrito guardado al cargar la página
+//Recupero el carrito guardado al cargar la página
 window.addEventListener('DOMContentLoaded', () => {
   const carritoGuardado = JSON.parse(localStorage.getItem('carrito'));
   if (carritoGuardado) {
     carrito.push(...carritoGuardado);
     actualizarCarrito();
   }
-  cargarAccesorios(); // 👈 Muestra los accesorios simulando una API
+  cargarAccesorios(); //simulacipon de una api
 });
 
 // Contenedores para mostrar el carrito y el total
@@ -20,7 +20,7 @@ const total = document.getElementById('total');
 const btnVaciar = document.getElementById('btnVaciar');
 const btnFinalizar = document.getElementById('btnFinalizar');
 
-// Recorrer cada botón "Comprar" y agregar evento
+//recorrer cada botón "Comprar" y agregar evento
 botones.forEach(boton => {
   boton.addEventListener('click', (e) => {
     const card = e.target.closest('.motoCard');
@@ -42,18 +42,18 @@ botones.forEach(boton => {
       gravity: "bottom",
       position: "center",
       style: {
-        background: "#27ae60",
-        color: "#fff",
-        padding: "15px",
-        fontSize: "18px",
-        borderRadius: "8px",
-        fontWeight: "bold",
-        textAlign: "center",
-        position: "fixed",
-        bottom: "50%",
-        left: "50%",
-        transform: "translate(-50%, 50%)",
-        zIndex: "9999"
+      background: "#27ae60",
+      color: "#fff",
+      padding: "15px",
+      fontSize: "18px",
+      borderRadius: "8px",
+      fontWeight: "bold",
+      textAlign: "center",
+      position: "fixed",
+      bottom: "50%",
+      left: "50%",
+      transform: "translate(-50%, 50%)",
+      zIndex: "9999"
       }
     }).showToast();
 
@@ -61,7 +61,7 @@ botones.forEach(boton => {
   });
 });
 
-// Mostrar productos del carrito y el total
+//Mostrar productos del carrito y el total
 function actualizarCarrito() {
   contenedor.innerHTML = '<h3>🛒Detalle de venta:</h3>';
   let suma = 0;
@@ -102,7 +102,7 @@ btnVaciar.addEventListener('click', () => {
   localStorage.removeItem('carrito');
 });
 
-// Finalizar compra con validación
+//finalizar compra con validación
 btnFinalizar.addEventListener('click', () => {
   if (carrito.length === 0) {
     Swal.fire({
@@ -159,12 +159,12 @@ btnFinalizar.addEventListener('click', () => {
       carrito.length = 0;
       actualizarCarrito();
       localStorage.removeItem('carrito');
-      modalCarrito.classList.add('oculto'); // 👈 Cierra el modal después de confirmar
+      modalCarrito.classList.add('oculto'); 
     }
   });
 });
 
-// Abrir y cerrar modal del carrito
+//Abrir y cerrar modal del carrito
 const abrirCarritoBtn = document.getElementById('abrirCarrito');
 const modalCarrito = document.getElementById('modalCarrito');
 const cerrarCarritoBtn = document.getElementById('cerrarCarrito');
@@ -177,7 +177,7 @@ cerrarCarritoBtn.addEventListener('click', () => {
   modalCarrito.classList.add('oculto');
 });
 
-// Simular llamada a API de accesorios
+//simular llamada a API de accesorios
 function cargarAccesorios() {
   fetch('js/accesorios.json')
     .then(res => res.json())

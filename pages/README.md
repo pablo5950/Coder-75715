@@ -29,7 +29,7 @@ Este proyecto presenta un catálogo interactivo de motos con sistema de carrito 
 ## Cómo probar el proyecto
 
 1. Cloná o descargá el repositorio
-2. Abrí `index.html` en tu navegador
+2. Dirigíte a la sección `catalogo.html` en tu navegador
 3. Interactuá con el catálogo: agregá motos, eliminá, vaciá y finalizá compra
 4. El carrito se abrirá como modal flotante al tocar el botón 🛒
 
