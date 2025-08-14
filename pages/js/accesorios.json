@@ -1,28 +1,26 @@
 [
- 
   {
+    "id": 101,
     "nombre": "Botas Alpine stars",
     "precio": 55000,
     "imagen": "/images/accesorio2.jpg"
   },
-
   {
+    "id": 102,
     "nombre": "Casco Integral LS2",
     "precio": 32000,
     "imagen": "/images/accesorio1.jpg"
-
   },
-  
   {
+    "id": 103,
     "nombre": "Aceite Castrol actevo",
     "precio": 12000,
     "imagen": "/images/accesorio3.jpg"
   },
-
   {
+    "id": 104,
     "nombre": "Escape R1 Yamaha",
     "precio": 70000,
     "imagen": "/images/accesorio4.jpg"
   }
-
 ]

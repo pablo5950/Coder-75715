@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,    
+    "nombre": "Honda CG 150",
+    "precio": 550000,
+    "imagen": "../images/moto1.jpg",
+    "oferta": true
+  },
+  {
+    "id": 2,      
+    "nombre": "Honda Navi",
+    "precio": 500000,
+    "imagen": "../images/moto2.jpg",
+    "oferta": false
+  },
+  {
+    "id": 3, 
+    "nombre": "Honda Biz",
+    "precio": 600000,
+    "imagen": "../images/moto3.jpg",
+    "oferta": true
+  },
+  {
+    "id": 4, 
+    "nombre": "Motomel Blitz 250",
+    "precio": 770000,
+    "imagen": "../images/moto4.jpg",
+    "oferta": false
+  },
+  {  
+    "id": 5, 
+    "nombre": "Zanella ZB 110",
+    "precio": 480000,
+    "imagen": "../images/moto5.jpg",
+    "oferta": false
+  },
+  {
+    "id": 6, 
+    "nombre": "Vespa",
+    "precio": 790000,
+    "imagen": "../images/moto6.jpg",
+    "oferta": false
+  },
+  {
+    "id": 7, 
+    "nombre": "Suzuki 350",
+    "precio": 990000,
+    "imagen": "../images/moto7.jpg",
+    "oferta": true
+  },
+  {
+    "id": 8, 
+    "nombre": "Kawasaki 600",
+    "precio": 1200000,
+    "imagen": "../images/moto8.jpg",
+    "oferta": false
+  },
+  {
+    "id": 9, 
+    "nombre": "Benelli 600",
+    "precio": 1100000,
+    "imagen": "../images/moto9.jpg",
+    "oferta": false
+  },
+  {
+    "id": 10, 
+    "nombre": "Ktm 400",
+    "precio": 1000000,
+    "imagen": "../images/moto10.jpg",
+    "oferta": true
+  },
+  {
+    "id": 11, 
+    "nombre": "Honda Reverse",
+    "precio": 850000,
+    "imagen": "../images/moto11.jpeg",
+    "oferta": true
+  },
+  {
+    "id": 12, 
+    "nombre": "Zanella g-force",
+    "precio": 990000,
+    "imagen": "../images/moto12.jpg",
+    "oferta": true
+  }
+]
